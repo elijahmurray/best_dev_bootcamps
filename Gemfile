@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'slim'
+group :development do
+  gem 'guard'
+end
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
