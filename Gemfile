@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem "slim-rails"
+gem 'simple_form'
 
 group :development do
   gem 'guard'
