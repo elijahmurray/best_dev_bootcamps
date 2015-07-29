@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 
-.swp
+*.swp
 
 # From:
 # https://github.com/github/gitignore/blob/master/Rails.gitignore
