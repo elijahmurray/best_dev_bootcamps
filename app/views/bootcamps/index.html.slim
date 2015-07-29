@@ -1,0 +1,10 @@
+h1 All Bootcamps
+
+table.table
+  tr
+    th Name
+    th Rating
+  - @bootcamps.each do |bootcamp|
+    tr
+      td = bootcamp.name
+      td = bootcamp.rating
