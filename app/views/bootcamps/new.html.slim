@@ -1,9 +1,10 @@
-h1 Hi
+h1 Create New Bootcamp
 
 = simple_form_for :bootcamp, url: bootcamps_path do |f|
   = f.input :name
   = f.input :rating
-  = f.submit
+  = f.submit "Save",  class: 'btn btn-primary'
 
-= link_to 'Back', bootcamps_path
+br
+= link_to 'Back', bootcamps_path, class: 'btn btn-default'
 
