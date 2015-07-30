@@ -4,5 +4,6 @@ h3 = "Rating: #{@bootcamp.rating}"
 / Pending action
 / = link_to 'Edit', edit_bootcamp_path
 br
-= link_to 'Back to All', bootcamps_path
+.btn.btn-default= link_to "Edit", edit_bootcamp_path(@bootcamp)
+.btn.btn-default= link_to 'Back to All', bootcamps_path
 

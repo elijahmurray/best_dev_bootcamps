@@ -1,0 +1,19 @@
+h1 Edit Bootcamp
+
+= simple_form_for :bootcamp, url: bootcamp_path(@bootcamp), method: :patch do |f|
+
+  - if @bootcamp.errors.any?
+    .alert.alert-danger
+      / span.glyphicon.glyphicon-exclamation-sign aria-hidden="true"
+      / span.sr-only Error:
+      h5= "#{pluralize(@bootcamp.errors.count, "error")} stopped this bootcamp from saving:"
+      ul
+        - @bootcamp.errors.full_messages.each do |msg|
+          li= msg
+  = f.input :name
+  = f.input :rating
+  = f.submit "Save",  class: 'btn btn-primary'
+
+br
+= link_to 'Back', bootcamp_path(@bootcamp), class: 'btn btn-default'
+

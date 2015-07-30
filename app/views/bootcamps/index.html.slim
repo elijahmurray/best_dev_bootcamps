@@ -4,8 +4,12 @@ table.table
   tr
     th Name
     th Rating
+    th Actions
   - @bootcamps.each do |bootcamp|
     tr
       td = bootcamp.name
       td = bootcamp.rating
+      td
+        .btn.btn-link= link_to "Show", bootcamp_path(bootcamp)
+        .btn.btn-link= link_to "Edit", edit_bootcamp_path(bootcamp)
 = link_to('Create New Bootcamp', new_bootcamp_path)

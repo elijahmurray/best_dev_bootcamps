@@ -6,6 +6,10 @@ class BootcampsController < ApplicationController
   def new
   end
 
+  def show
+    @bootcamp = Bootcamp.find(params[:id])
+  end
+
   def create
     @bootcamp = Bootcamp.new(bootcamp_params)
 
@@ -16,8 +20,17 @@ class BootcampsController < ApplicationController
     end
   end
 
-  def show
+  def edit
     @bootcamp = Bootcamp.find(params[:id])
+  end
+
+  def update
+    @bootcamp = Bootcamp.find(params[:id])
+    if @bootcamp.update(bootcamp_params)
+      redirect_to @bootcamp
+    else
+      render 'edit'
+    end
   end
 
   private
