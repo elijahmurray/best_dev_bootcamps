@@ -9,8 +9,11 @@ class BootcampsController < ApplicationController
   def create
     @bootcamp = Bootcamp.new(bootcamp_params)
 
-    @bootcamp.save
-    redirect_to @bootcamp
+    if @bootcamp.save
+      redirect_to @bootcamp
+    else
+      render 'new'
+    end
   end
 
   def show
