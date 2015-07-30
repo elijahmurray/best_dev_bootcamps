@@ -4,6 +4,7 @@ class BootcampsController < ApplicationController
   end
 
   def new
+    @bootcamp = Bootcamp.new
   end
 
   def show
