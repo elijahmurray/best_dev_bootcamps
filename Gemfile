@@ -9,13 +9,18 @@ group :development do
   gem 'guard-livereload', '~> 2.4', require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'pry'
 end
 
 
 group :development, :test do
+  gem 'pry'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'guard-rspec', require: false
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 
