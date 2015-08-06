@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe StaticPagesController, type: :controller do
-  render_views
 
   describe 'GET #home' do
     before(:each) do
@@ -13,8 +12,8 @@ describe StaticPagesController, type: :controller do
       expect(response).to have_http_status(200)
     end
 
-    it "says 'Welcome'" do
-      expect(response.body).to match /Welcome/
+    it "should render the :home view" do
+      response.should render_template :home
     end
   end
 
@@ -28,8 +27,8 @@ describe StaticPagesController, type: :controller do
       expect(response).to have_http_status(200)
     end
 
-    it "says 'About Us'" do
-      expect(response.body).to match /About Us/
+    it "should render the :about view" do
+      response.should render_template :about
     end
   end
 end
