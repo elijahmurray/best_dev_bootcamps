@@ -1,5 +1,9 @@
+//hack: temporarily redeclare navbar-height here
+$navbar-height: 70px;
+
 .top-section {
-  min-height: 240px;
+  min-height: 200px + $navbar-height;
+  margin-top: -1 * $navbar-height;
   background: image-url("background-image.jpg");
   background-size: cover;
   color: white;

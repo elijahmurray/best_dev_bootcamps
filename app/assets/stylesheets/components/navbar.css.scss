@@ -1,5 +1,9 @@
 @import "base/colors";
 
+.navbar { 
+  background: transparent;
+  min-height: 70px;
+}
 .navbar-default .navbar-nav {
   > li > a { color: white; }
 
@@ -12,4 +16,3 @@
   }
 }
 
-.navbar { background: transparent; }

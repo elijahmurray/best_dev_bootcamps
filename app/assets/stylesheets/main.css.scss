@@ -3,6 +3,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$navbar-height: 70px;
+
+body { padding-top: $navbar-height; }
 // Main CSS File
 @import "vendor/over_rides";
 @import "base/colors";

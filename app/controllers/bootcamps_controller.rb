@@ -1,5 +1,5 @@
 class BootcampsController < ApplicationController
-  layout 'application_fluid'
+  layout :custom_layout
 
   def index
     @bootcamps = Bootcamp.all
@@ -39,5 +39,14 @@ class BootcampsController < ApplicationController
   private
   def bootcamp_params
     params.require(:bootcamp).permit(:name, :rating)
+  end
+
+  def custom_layout
+    case action_name
+    when 'show'
+      'application_fluid'
+    else
+      'application'
+    end
   end
 end
