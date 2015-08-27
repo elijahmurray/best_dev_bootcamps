@@ -1,4 +1,6 @@
 class BootcampsController < ApplicationController
+  layout 'application_fluid'
+
   def index
     @bootcamps = Bootcamp.all
   end

@@ -1,9 +1,32 @@
-h3 = "Name: #{@bootcamp.name}"
-h3 = "Rating: #{@bootcamp.rating}"
+.top-section
+  .container
+    .col-md-12
+      .pull-left
+        h1 = @bootcamp.name
+      .pull-right
+        h3 = "#{@bootcamp.rating} / 10"
 
-/ Pending action
-/ = link_to 'Edit', edit_bootcamp_path
-br
-.btn.btn-default= link_to "Edit", edit_bootcamp_path(@bootcamp)
-.btn.btn-default= link_to 'Back to All', bootcamps_path
+.clearfix
+.container
+  .bottom-section
+    .description.col-md-8
+      b Description
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    .info.col-md-4
+      b Info
+      table.table
+        tr
+          td Website
+          td appacademy.com
+        tr
+          td Phone
+          td 717.555.5555
+        tr
+          td Email
+          td support@appacademy.com
+    br
+    .btn.btn-default= link_to "Edit", edit_bootcamp_path(@bootcamp)
+    .btn.btn-default= link_to 'Back to All', bootcamps_path
+    / Pending action
+    / = link_to 'Edit', edit_bootcamp_path
 

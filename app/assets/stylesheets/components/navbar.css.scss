@@ -1,0 +1,15 @@
+@import "base/colors";
+
+.navbar-default .navbar-nav {
+  > li > a { color: white; }
+
+  .active > a,
+  .active > a:hover,
+  .active > a:focus { 
+    background: transparent; 
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.navbar { background: transparent; }
